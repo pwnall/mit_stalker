@@ -1,0 +1,21 @@
+Student data loaded as of Sep 29, Staff data loaded as of Sep 29.
+
+Notify Personnel or use WebSIS as appropriate to change your information.
+
+Our on-line help system describes
+  How to change data, how the directory works, where to get more info.
+  For a listing of help topics, enter finger help@mit.edu. Try finger
+  help_about@mit.edu to read about how the directory works.
+  Directory bluepages may be found at http://mit.edu/communications/bp.
+
+There was 1 match to your request.
+
+      name: Costan, Victor Marius
+     email: costan@MIT.EDU
+     phone: (617) 452-5244
+   address: Sidney-Pacific NW86-948C
+department: Electrical Eng & Computer Sci
+    school: School Of Engineering         
+      year: G
+       url: http://www.costan.us
+     alias: V-costan

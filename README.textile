@@ -1,0 +1,21 @@
+h1. MIT Student Information Retriever
+
+mit_stalker is a Ruby gem that parses publicly available information about MIT
+students. 
+
+h2. Setup
+
+bc. gem install mit_stalker 
+
+h2. Usage
+
+Try this out in irb:
+
+bc. MitStalker.from_user_name 'costan'
+
+h2. Contributions
+
+The code was factored out of the 6.006 Web site, and it contains exactly what I
+needed for that site. I will not be adding features, but I will do my best to
+fix bugs. If you want a feature, please don't hesitate to fork the project and
+send me pull requests.

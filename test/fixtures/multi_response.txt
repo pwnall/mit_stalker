@@ -1,0 +1,732 @@
+Student data loaded as of Sep 29, Staff data loaded as of Sep 29.
+
+Notify Personnel or use WebSIS as appropriate to change your information.
+
+Our on-line help system describes
+  How to change data, how the directory works, where to get more info.
+  For a listing of help topics, enter finger help@mit.edu. Try finger
+  help_about@mit.edu to read about how the directory works.
+  Directory bluepages may be found at http://mit.edu/communications/bp.
+
+There were 155 matches to your request.
+
+Complete information will be shown only when one individual matches
+your query.  Resubmit your query with more information.
+For example, use both firstname and lastname or use the alias field.
+
+       name: Li, Alice
+ department: Electrical Eng & Computer Sci
+       year: 4
+      alias: A-li
+
+       name: Li, Amber H.
+       year: 1
+      alias: A-li1
+
+       name: Li, An
+ department: Electrical Eng & Computer Sci
+       year: 4
+      alias: A-li2
+
+       name: Li, Aoxi
+ department: Physics
+       year: 2
+      alias: A-li3
+
+       name: Li, Adrienne Victoria
+ department: Biological Engineering
+       year: G
+      alias: A-li4
+
+       name: Li, Anye
+ department: Lincoln Laboratory
+      title: LL - Assistant Staff
+      alias: A-li5
+
+       name: Li, Bo 
+      title: MIT Affiliate
+      alias: B-li
+
+       name: Li, Bokyung
+ department: Management
+       year: G
+      alias: B-li1
+
+       name: Li, Biao
+ department: Laboratory for Manufacturing and Productivity
+      title: Visiting Engineer
+      alias: B-li2
+
+       name: Li, Chen 
+      title: MIT Affiliate
+      alias: C-li
+
+       name: Li, Chi King 
+      title: MIT Affiliate
+      alias: C-li1
+
+       name: Li, Chunyu 
+      title: MIT Affiliate
+      alias: C-li2
+
+       name: Li, Chun 
+      title: MIT Affiliate
+      alias: C-li3
+
+       name: Li, Chung-Lun 
+      title: MIT Affiliate
+      alias: C-li4
+
+       name: Li, Cheng
+ department: Health Sciences & Technology
+       year: G
+      alias: C-li5
+
+       name: Li, Cheri Yingjie
+ department: Chemical Engineering
+       year: G
+      alias: C-li6
+
+       name: Li, Chikang
+ department: Plasma Science and Fusion Center
+      title: Principal Research Scientist
+      alias: C-li7
+
+       name: Li, Daniel 
+      title: MIT Affiliate
+      alias: D-li
+
+       name: Li, Donghong 
+      title: MIT Affiliate
+      alias: D-li1
+
+       name: Li, Danielle
+ department: Economics
+       year: G
+      alias: D-li2
+
+       name: Li, Daniel C
+ department: Management
+       year: 3
+      alias: D-li3
+
+       name: Li, David
+ department: Electrical Eng & Computer Sci
+       year: 4
+      alias: D-li4
+
+       name: Li, Dai-Yin
+      alias: D-li5
+
+       name: Li, Duo
+ department: Electrical Eng & Computer Sci
+       year: G
+      alias: D-li6
+
+       name: Li, Derek Z
+ department: Mechanical Engineering
+       year: 3
+      alias: D-li7
+
+       name: Li, Dian
+ department: Political Science
+       year: G
+      alias: D-li8
+
+       name: Li, Deyu
+ department: Department of Biological Engineering
+      title: Postdoctoral Associate
+      alias: D-li9
+
+       name: Li, Enhao 
+      title: MIT Affiliate
+      alias: E-li
+
+       name: Li, Fang 
+      title: MIT Affiliate
+      alias: F-li
+
+       name: Li, Fulu 
+      title: MIT Affiliate
+      alias: F-li1
+
+       name: Li, Frank H.
+       year: 1
+      alias: F-li2
+
+       name: Li, Guang 
+      title: MIT Affiliate
+      alias: G-li
+
+       name: Li, Grace M
+ department: Electrical Eng & Computer Sci
+       year: 4
+      alias: G-li1
+
+       name: Li, George Z
+ department: Chemical Engineering
+       year: 4
+      alias: G-li2
+
+       name: Li, Guoan
+ department: Department of Mechanical Engineering
+      title: Lecturer
+      alias: G-li3
+
+       name: Li, Guohui
+ department: Dept of Earth, Atmospheric, & Planetary Sciences
+      title: Postdoctoral Associate
+      alias: G-li4
+
+       name: Li, Hua-Jung 
+      title: MIT Affiliate
+      alias: H-li
+
+       name: Li, Hong 
+      title: MIT Affiliate
+      alias: H-li1
+
+       name: Li, Hanhan 
+      title: MIT Affiliate
+      alias: H-li2
+
+       name: Li, Huipeng 
+      title: MIT Affiliate
+      alias: H-li3
+
+       name: Li, Hanqing
+ department: Management
+       year: G
+      alias: H-li4
+
+       name: Li, HaoQi
+ department: Biology
+       year: 3
+      alias: H-li5
+
+       name: Li, Hsinjung
+ department: Chemical Engineering
+       year: 3
+      alias: H-li6
+
+       name: Li, Hui
+ department: Aeronautics And Astronautics
+       year: G
+      alias: H-li7
+
+       name: Li, Harriet
+       year: 1
+      alias: H-li8
+
+       name: Li, Hongyi
+ department: Economics
+       year: 3
+      alias: H-li9
+
+       name: Li, Hanqing
+ department: Microsystems Technology Laboratories
+      title: Research Scientist
+      alias: H-li10
+
+       name: Li, Jim 
+      title: MIT Affiliate
+      alias: J-li
+
+       name: Li, Jie 
+      title: MIT Affiliate
+      alias: J-li1
+
+       name: Li, Jacqueline
+ department: Non-Institute  Harvard
+       year: 3
+      alias: J-li2
+
+       name: Li, Jennifer
+ department: Electrical Eng & Computer Sci
+       year: 3
+      alias: J-li3
+
+       name: Li, Jessica X.
+       year: 1
+      alias: J-li4
+
+       name: Li, Jessie Q
+ department: Electrical Eng & Computer Sci
+       year: 3
+      alias: J-li5
+
+       name: Li, Jialing
+ department: Physics
+       year: G
+      alias: J-li6
+
+       name: Li, Janet
+ department: Biology
+       year: 2
+      alias: J-li7
+
+       name: Li, Josepher
+       year: 1
+      alias: J-li8
+
+       name: Li, Junlun
+ department: Earth, Atmos, & Planetary Sci
+       year: G
+      alias: J-li9
+
+       name: Li, Justine
+ department: Aeronautics And Astronautics
+       year: 4
+      alias: J-li10
+
+       name: Li, Jing
+ department: Electrical Eng & Computer Sci
+       year: 3
+      alias: J-li11
+
+       name: Li, Jinghua
+ department: Department of Urban Studies and Planning
+      title: Visiting Scholar
+      alias: J-li12
+
+       name: Li, Kai 
+      title: MIT Affiliate
+      alias: K-li
+
+       name: Li, Karen R
+ department: Economics
+       year: 3
+      alias: K-li1
+
+       name: Li, Kathleen Y
+ department: Biology
+       year: 3
+      alias: K-li2
+
+       name: Li, Kimberly Q.
+ department: Electrical Eng & Computer Sci
+       year: 2
+      alias: K-li3
+
+       name: Li, Kevin K.
+       year: 1
+      alias: K-li4
+
+       name: Li, Lin 
+      title: MIT Affiliate
+      alias: L-li
+
+       name: Li, Loretta S
+      title: MIT Affiliate
+      alias: L-li1
+
+       name: Li, Lulu 
+      title: MIT Affiliate
+      alias: L-li2
+
+       name: Li, Leon Daliang
+ department: Health Sciences & Technology
+       year: G
+      alias: L-li3
+
+       name: Li, Lifang
+ department: Mechanical Engineering
+       year: G
+      alias: L-li4
+
+       name: Li, Ling
+ department: Materials Science And Eng.
+       year: G
+      alias: L-li5
+
+       name: Li, Lishuai
+ department: Aeronautics And Astronautics
+       year: G
+      alias: L-li6
+
+       name: Li, Letitia W
+ department: Electrical Eng & Computer Sci
+       year: 3
+      alias: L-li7
+
+       name: Li, Lynn Lei
+      alias: L-li8
+
+       name: Li, Li
+ department: Department of Chemistry
+      title: Research Specialist
+      alias: L-li9
+
+       name: Li, Lu
+ department: Department of Physics
+      title: Postdoctoral Fellow
+      alias: L-li10
+
+       name: Li, Mingjie 
+      title: MIT Affiliate
+      alias: M-li
+
+       name: Li, Man Chung
+ department: Biology
+       year: G
+      alias: M-li1
+
+       name: Li, Mingda
+ department: Nuclear Science & Engineering
+       year: G
+      alias: M-li2
+
+       name: Li, Meng
+ department: Computation For Design & Optimization
+       year: G
+      alias: M-li3
+
+       name: Li, Ning 
+      title: MIT Affiliate
+      alias: N-li
+
+       name: Li, Nan
+ department: Mathematics
+       year: G
+      alias: N-li1
+
+       name: Li, Nathan P
+ department: Management
+       year: 3
+      alias: N-li2
+
+       name: Li, Ning
+ department: Leaders for Global Operations Program
+      title: Visiting Scholar
+      alias: N-li3
+
+       name: Li, Puyao C.
+ department: Health Sciences & Technology
+       year: G
+      alias: P-li
+
+       name: Li, Patricia Z.
+       year: 1
+      alias: P-li1
+
+       name: Li, Ping
+ department: Department of Chemistry
+      title: Postdoctoral Fellow
+      alias: P-li2
+
+       name: Li Ting, Poh 
+      title: MIT Affiliate
+      alias: P-liting
+
+       name: Li, Qing 
+      title: MIT Affiliate
+      alias: Q-li
+
+       name: Li, Qiushi 
+      title: MIT Affiliate
+      alias: Q-li1
+
+       name: Li, Quentin 
+      title: MIT Affiliate
+      alias: Q-li2
+
+       name: Li, Qing
+ department: Management
+       year: 4
+      alias: Q-li3
+
+       name: Li, Qing
+ department: Management
+       year: 2
+      alias: Q-li4
+
+       name: Li, Qiuyuan J
+ department: Electrical Eng & Computer Sci
+       year: G
+      alias: Q-li5
+
+       name: Li, Qingnan
+ department: Mathematics
+       year: 2
+      alias: Q-li6
+
+       name: Li, Qu
+ department: Department of Civil and Environmental Engineering
+      title: Research Assistant
+      alias: Q-li7
+
+       name: Li, Randolph H
+      title: MIT Affiliate
+      alias: R-li
+
+       name: Li, Ran 
+      title: MIT Affiliate
+      alias: R-li1
+
+       name: Li, Ranning
+ department: Management
+       year: G
+      alias: R-li2
+
+       name: Li, Richard
+ department: Aeronautics And Astronautics
+       year: 4
+      alias: R-li3
+
+       name: Li, Rui
+ department: Electrical Eng & Computer Sci
+       year: G
+      alias: R-li4
+
+       name: Li, Sean A
+      title: MIT Affiliate
+      alias: S-li
+
+       name: Li, Sheung L
+      title: MIT Affiliate
+      alias: S-li1
+
+       name: Li, Shuo C.
+ department: Electrical Eng & Computer Sci
+       year: 2
+      alias: S-li2
+
+       name: Li, Shirley Xue
+ department: Management
+       year: G
+      alias: S-li3
+
+       name: Li, Tieyu
+ department: Engineering Systems Division
+       year: G
+      alias: T-li
+
+       name: Li, Tong
+       year: 1
+      alias: T-li1
+
+       name: Li, Tracy Y
+ department: Physics
+       year: 4
+      alias: T-li2
+
+       name: Li, Victoria 
+      title: MIT Affiliate
+      alias: V-li
+
+       name: Li, Weigang 
+      title: MIT Affiliate
+      alias: W-li
+
+       name: Li, Wendi 
+      title: MIT Affiliate
+      alias: W-li1
+
+       name: Li, Wentao 
+      title: MIT Affiliate
+      alias: W-li2
+
+       name: Li, Wu 
+      title: MIT Affiliate
+      alias: W-li3
+
+       name: Li, Wei
+ department: Electrical Eng & Computer Sci
+       year: G
+      alias: W-li4
+
+       name: Li, Weifeng
+ department: Urban Studies And Planning
+       year: G
+      alias: W-li5
+
+       name: Li, Weiliang
+ department: Aeronautics And Astronautics
+       year: G
+      alias: W-li6
+
+       name: Li, Weisen Janet
+ department: Management
+       year: G
+      alias: W-li7
+
+       name: Li, William Pui Lum
+ department: Engineering Systems Division
+       year: G
+      alias: W-li8
+
+       name: Li, Wu-Hsi
+ department: Media Arts And Sciences
+       year: G
+      alias: W-li9
+
+       name: Li, Wai-ming
+ department: Information Services & Technology
+      title: Team Leader, Technical Services
+      alias: W-li10
+
+       name: Li, Wei
+ department: Laboratory for Nuclear Science
+      title: Postdoctoral Associate
+      alias: W-li11
+
+       name: Li, Xiaochang 
+      title: MIT Affiliate
+      alias: X-li
+
+       name: Li, Xianlin 
+      title: MIT Affiliate
+      alias: X-li1
+
+       name: Li, Xuying
+ department: Mathematics
+       year: 3
+      alias: X-li2
+
+       name: Li, Xingyi
+ department: Electrical Eng & Computer Sci
+       year: 3
+      alias: X-li3
+
+       name: Li, Xin
+ department: Urban Studies And Planning
+       year: G
+      alias: X-li4
+
+       name: Li, Xin Qi
+ department: Biology
+       year: 2
+      alias: X-li5
+
+       name: Li, Xitong
+ department: Management
+       year: G
+      alias: X-li6
+
+       name: Li, Xiang
+ department: Department of Chemical Engineering
+      title: Visiting Scholar
+      alias: X-li7
+
+       name: Li, Yuanjian 
+      title: MIT Affiliate
+      alias: Y-li
+
+       name: Li, Yu 
+      title: MIT Affiliate
+      alias: Y-li1
+
+       name: Li, Yue 
+      title: MIT Affiliate
+      alias: Y-li2
+
+       name: Li, Yuanzhen 
+      title: MIT Affiliate
+      alias: Y-li3
+
+       name: Li, Yuan
+ department: Non-Institute  Wellesley
+       year: 4
+      alias: Y-li4
+
+       name: Li, Yu-Tzu
+ department: Chemistry
+       year: G
+      alias: Y-li5
+
+       name: Li, Yujing
+ department: Architecture
+       year: 4
+      alias: Y-li6
+
+       name: Li, Yong
+ department: Mechanical Engineering
+       year: G
+      alias: Y-li7
+
+       name: Li, Yan
+ department: Electrical Eng & Computer Sci
+       year: G
+      alias: Y-li8
+
+       name: Li, Yat Ming Victor
+ department: Mechanical Engineering
+       year: 3
+      alias: Y-li9
+
+       name: Li, Yang
+ department: Biological Engineering
+       year: G
+      alias: Y-li10
+
+       name: Li, YingFei
+ department: Biological Engineering
+       year: 4
+      alias: Y-li11
+
+       name: Li, Yinqing
+ department: Electrical Eng & Computer Sci
+       year: G
+      alias: Y-li12
+
+       name: Li, Yan
+ department: Mathematics
+       year: 2
+      alias: Y-li13
+
+       name: Li, Yue
+ department: Mechanical Engineering
+       year: 3
+      alias: Y-li14
+
+       name: Li, Yuqiong
+ department: Chemical Engineering
+       year: G
+      alias: Y-li15
+
+       name: Li, Yan Ping
+ department: Division of Comparative Medicine
+      title: Assistant Animal Technician
+      alias: Y-li16
+
+       name: Li, Yang
+ department: Department of Chemistry
+      title: Postdoctoral Associate
+      alias: Y-li17
+
+       name: Li, Yaning
+ department: Department of Mechanical Engineering
+      title: Postdoctoral Associate
+      alias: Y-li18
+
+       name: Li, Yi
+ department: Department of Materials Science and Engineering
+      title: SMA Visiting Scientist
+      alias: Y-li19
+
+       name: Li, Zane K
+      title: MIT Affiliate
+      alias: Z-li
+
+       name: Li, Zhongwei 
+      title: MIT Affiliate
+      alias: Z-li1
+
+       name: Li, Zhen
+ department: Electrical Eng & Computer Sci
+       year: G
+      alias: Z-li2
+
+       name: Li, Zhipeng
+ department: Electrical Eng & Computer Sci
+      alias: Z-li3
+
+       name: Li, Zhi
+ department: Department of Chemical Engineering
+      title: SMA Visiting Scientist
+      alias: Z-li4
+
+       name: Li, Zhuan
+ department: Division of Comparative Medicine
+      title: Assistant Animal Technician
+      alias: Z-li5
