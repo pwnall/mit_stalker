@@ -61,14 +61,29 @@ class MitStalkerTest < Test::Unit::TestCase
     end
   end
   
-  def test_refine_mitdir_response
+  def test_refine_mitdir_response_by_name
     flexmock(MitStalker).should_receive(:finger).with('Y-li16', 'web.mit.edu').
-                         and_return(fixture('single_response.txt'))
+                         and_return(fixture('single_response.txt')).once
                          
     multi_response =
         MitStalker.parse_mitdir_response fixture('multi_response.txt')
-    user = MitStalker.refine_mitdir_response multi_response, 'Yan Ping Li'
+    user = MitStalker.refine_mitdir_response_by_name multi_response,
+                                                     'Yan Ping Li'
     assert_equal 'costan@MIT.EDU', user[:email], 'Wrong user information'
+  end
+  
+  def test_refine_mitdir_response_by_email
+    flexmock(MitStalker).should_receive(:finger).with('V-costan', 'web.mit.edu').
+                         and_return(fixture('single_response.txt')).once
+    flexmock(MitStalker).should_receive(:finger).with('A-li', 'web.mit.edu').
+                         and_return(fixture('single_response2.txt')).once
+
+    mixed_response =
+        MitStalker.parse_mitdir_response fixture('mixed_response.txt')
+    user = MitStalker.refine_mitdir_response_by_email mixed_response.reverse,
+                                                     'aliceli'
+    assert user, 'No user returned'
+    assert_equal 'Li, Alice', user[:name]
   end
   
   def test_from_user_name

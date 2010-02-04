@@ -75,7 +75,7 @@ module MitStalker
   #
   # Returns a single user information hash, or nil if no user has the given
   # full name. 
-  def self.refine_mitdir_response(users, full_name)
+  def self.refine_mitdir_response_by_name(users, full_name)
     vector = name_vector(full_name)
     user_base_info = users.find { |user| name_vector(user[:name]) == vector }
     return nil unless user_base_info
@@ -86,6 +86,28 @@ module MitStalker
     # Requesting by alias should return a single name.
     users = parse_mitdir_response finger(user_base_info[:alias], 'web.mit.edu')
     users and users.first
+  end
+  
+  # Narrows down a MIT directory response to a single user.
+  #
+  # Returns a single user information hash, or nil if no user has the given
+  # e-mail.
+  def self.refine_mitdir_response_by_email(users, user_name)
+    users.each do |user|
+      if user[:email]
+        next unless user[:email].split('@').first == user_name
+        users = parse_mitdir_response finger(user[:alias], 'web.mit.edu')
+        return users && users.first
+      else
+        users = parse_mitdir_response finger(user[:alias], 'web.mit.edu')
+        next unless users
+        user = users.first
+        if user[:email] and user[:email].split('@').first == user_name
+          return user  
+        end
+      end
+    end
+    nil
   end
   
   # Retrieves information about an MIT student from an Athena username.
@@ -101,7 +123,8 @@ module MitStalker
       users = parse_mitdir_response finger(user_name, 'web.mit.edu')
     end
     
-    user = refine_mitdir_response(users, full_name)
+    user = refine_mitdir_response_by_name(users, full_name)
+    user = refine_mitdir_response_by_email(users, user_name) unless user
     user and user.merge(:full_name => full_name)
   end
 end
