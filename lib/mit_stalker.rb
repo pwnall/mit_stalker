@@ -110,21 +110,31 @@ module MitStalker
     nil
   end
   
+  # Flips an official full-name (e.g. Costan, Victor-Marius) to its normal form.
+  def self.flip_full_name(name)
+    name.split(',', 2).map(&:strip).reverse.join(' ')
+  end
+  
   # Retrieves information about an MIT student from an Athena username.
   #
   # Returns a hash containing user information, or nil if the user was not
   # found.
   def self.from_user_name(user_name)
     full_name = full_name_from_user_name user_name
-    return nil unless full_name
     
-    users = parse_mitdir_response finger(full_name, 'web.mit.edu')
+    if full_name
+      users = parse_mitdir_response finger(full_name, 'web.mit.edu')
+    else
+      users = []
+    end
     if users.empty?
       users = parse_mitdir_response finger(user_name, 'web.mit.edu')
     end
     
-    user = refine_mitdir_response_by_name(users, full_name)
+    user = refine_mitdir_response_by_name(users, full_name) if full_name
     user = refine_mitdir_response_by_email(users, user_name) unless user
-    user and user.merge(:full_name => full_name)
+    return nil unless user
+    
+    user.merge :full_name => (full_name || flip_full_name(user[:name]))
   end
 end

@@ -86,10 +86,21 @@ class MitStalkerTest < Test::Unit::TestCase
     assert_equal 'Li, Alice', user[:name]
   end
   
+  def test_flip_full_name
+    assert_equal 'Victor Marius Costan',
+                 MitStalker.flip_full_name('Costan, Victor Marius'), 'flipped'
+    assert_equal 'Victor Marius Costan',
+                 MitStalker.flip_full_name('Victor Marius Costan'), 'canonical'
+  end
+  
   def test_from_user_name
     assert_equal nil, MitStalker.from_user_name('no_such_user')
     
     info = MitStalker.from_user_name 'devadas'
     assert_equal 'Devadas, Srinivas', info[:name]
+    
+    info = MitStalker.from_user_name 'nickolai'
+    assert_equal 'Zeldovich, Nickolai', info[:name]
+    assert_equal 'Nickolai Zeldovich', info[:full_name]
   end
 end
