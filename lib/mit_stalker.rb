@@ -31,7 +31,7 @@ module MitStalker
   # Returns a string containing the full name, or nil if the Athena username is
   # not recognized. 
   def self.full_name_from_user_name(user_name)
-    athena_data = finger user_name, 'linux.mit.edu'
+    athena_data = finger user_name.downcase, 'linux.mit.edu'
     return nil if athena_data.nil?
     match = athena_data.match /(N|n)ame\: (.*)$/
     match and match[2].strip
@@ -93,9 +93,10 @@ module MitStalker
   # Returns a single user information hash, or nil if no user has the given
   # e-mail.
   def self.refine_mitdir_response_by_email(users, user_name)
+    user_name = user_name.downcase
     users.each do |user|
       if user[:email]
-        next unless user[:email].split('@').first == user_name
+        next unless user[:email].split('@').first.downcase == user_name
         users = parse_mitdir_response finger(user[:alias], 'web.mit.edu')
         return users && users.first
       else
@@ -120,6 +121,7 @@ module MitStalker
   # Returns a hash containing user information, or nil if the user was not
   # found.
   def self.from_user_name(user_name)
+    user_name = user_name.downcase
     full_name = full_name_from_user_name user_name
     
     if full_name

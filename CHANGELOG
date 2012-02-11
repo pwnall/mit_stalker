@@ -1,3 +1,5 @@
+v1.0.4. Correct handling of capital letters in input.
+
 v1.0.3. Workaround for people not registered on linux.mit.edu.
 
 v1.0.2. Workaround for people undergoing name changes.

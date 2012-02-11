@@ -23,7 +23,11 @@ class MitStalkerTest < Test::Unit::TestCase
   
   def test_full_name
     assert_equal 'Srinivas Devadas',
-                 MitStalker.full_name_from_user_name('devadas')
+                 MitStalker.full_name_from_user_name('devadas'),
+                 'normalized'
+    assert_equal 'Srinivas Devadas',
+                 MitStalker.full_name_from_user_name('Devadas'),
+                 'Capital letter in user name'
     assert_equal nil, MitStalker.full_name_from_user_name('no_user')
   end
   
@@ -99,6 +103,9 @@ class MitStalkerTest < Test::Unit::TestCase
     info = MitStalker.from_user_name 'devadas'
     assert_equal 'Devadas, Srinivas', info[:name]
     
+    info = MitStalker.from_user_name 'Devadas'
+    assert_equal 'Devadas, Srinivas', info[:name], 'capitalized user name'
+
     info = MitStalker.from_user_name 'nickolai'
     assert_equal 'Zeldovich, Nickolai', info[:name]
     assert_equal 'Nickolai Zeldovich', info[:full_name]
