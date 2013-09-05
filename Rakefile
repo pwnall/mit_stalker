@@ -1,28 +1,38 @@
-# Rakefile that uses echoe to manage mit_stalker's gemspec. 
-#
-# Author:: Victor Costan
-# Copyright:: Copyright (C) 2009 Zergling.Net
-# License:: MIT
+# encoding: utf-8
 
 require 'rubygems'
-require 'echoe'
+require 'bundler'
+begin
+  Bundler.setup(:default, :development)
+rescue Bundler::BundlerError => e
+  $stderr.puts e.message
+  $stderr.puts "Run `bundle install` to install missing gems"
+  exit e.status_code
+end
+require 'rake'
 
-Echoe.new('mit_stalker') do |p|
-  p.project = 'zerglings'  # RubyForge project.
-  
-  p.author = 'Victor Costan'
-  p.email = 'victor@zergling.net'
-  p.summary = "Fetches publicly available information about MIT students."
-  p.url = 'http://github.com/costan/mit_stalker'
-  p.dependencies = []
-  p.development_dependencies = ["echoe >=3.1.1", "flexmock >=0.8.6"]
-  
-  p.need_tar_gz = true
-  p.need_zip = true
-  p.rdoc_pattern = /^(lib|bin|tasks|ext)|^BUILD|^README|^CHANGELOG|^TODO|^LICENSE|^COPYING$/  
+require 'jeweler'
+Jeweler::Tasks.new do |gem|
+  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
+  gem.name = "mit_stalker"
+  gem.homepage = "http://github.com/pwnall/mit_stalker"
+  gem.license = "MIT"
+  gem.summary = %Q{Fetches publicly available information about MIT students.}
+  gem.description = %Q{Fetches publicly available information about MIT students.}
+  gem.email = "victor@costan.us"
+  gem.authors = ["Victor Costan"]
+  # dependencies defined in Gemfile
+end
+Jeweler::RubygemsDotOrgTasks.new
+
+require 'rake/testtask'
+Rake::TestTask.new(:test) do |test|
+  test.libs << 'lib' << 'test'
+  test.pattern = 'test/**/*_test.rb'
+  test.verbose = true
 end
 
-if $0 == __FILE__
-  Rake.application = Rake::Application.new
-  Rake.application.run
-end
+task :default => :test
+
+require 'yard'
+YARD::Rake::YardocTask.new
