@@ -10,9 +10,20 @@ class MitStalkerTest < Minitest::Test
     assert_equal nil, MitStalker.finger('root', 'nosuchhostname.com'),
                  'Invalid hostname'
 
-    result = MitStalker.finger('no_such_user', 'web.mit.edu')
-    assert_operator(/matche?s? to your (query)|(request)/, :=~, result,
+    result = MitStalker.finger 'no_such_user', 'linux.mit.edu'
+    assert_operator(/no_such_user/, :=~, result,
                     "The finger response looks incorrect")
+
+    begin
+      MitStalker.finger_timeout = 1
+
+      start_time = Time.now
+      result = MitStalker.finger 'no_such_user', 'web.mit.edu'
+      assert_equal nil, result, 'Invalid timeout result'
+      assert_in_delta Time.now - start_time, 1, 0.2, 'Bad timeout duration'
+    ensure
+      MitStalker.finger_timeout = 10
+    end
   end
 
   def test_full_name

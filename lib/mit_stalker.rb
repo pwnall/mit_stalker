@@ -6,13 +6,19 @@ require 'timeout'
 
 # Fetch publicly available information about MIT students.
 module MitStalker
+  class <<self
+    # The number of seconds to wait for a finger result.
+    attr_accessor :finger_timeout
+  end
+  self.finger_timeout = 10
+
   # Issues a finger request to a server.
   #
   # Returns a string containing the finger response, or nil if something went
   # wrong.
   def self.finger(request, host)
     begin
-      Timeout.timeout(10) do
+      Timeout.timeout(self.finger_timeout) do
         client = TCPSocket.open host, 'finger'
         client.send request + "\n", 0    # 0 means standard packet
         result = client.readlines.join
@@ -121,7 +127,7 @@ module MitStalker
   #
   # Returns a hash containing user information, or nil if the user was not
   # found.
-  def self.from_user_name(user_name)
+  def self.from_user_name(user_name, finger_timeout=10)
     user_name = user_name.downcase
     full_name = full_name_from_user_name user_name
 
