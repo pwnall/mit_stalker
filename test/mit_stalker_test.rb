@@ -36,30 +36,42 @@ class MitStalkerTest < Minitest::Test
     assert_equal nil, MitStalker.full_name_from_user_name('no_user')
   end
 
-  def test_parse_mitdir_no_response
-    assert_equal [],
-                 MitStalker.parse_mitdir_response(fixture('no_response.txt'))
+  def test_web_query
+    response = MitStalker.web_query('Srinivas Devadas')
+    assert_match(/<html>.*<\/html>/m, response, 'Did not return raw HTML')
+    assert_match(/Student data loaded as of .*, Staff data loaded as of/,
+                 response, 'Did not query the directory')
+    assert_match(/Devadas, Srinivas/, response,
+                 'Did not issue the correct query')
   end
 
-  def test_parse_mitdir_single_response
-    response = MitStalker.parse_mitdir_response fixture('single_response.txt')
+  def test_parse_webdir_no_response
+    assert_equal [],
+                 MitStalker.parse_webdir_response(fixture('no_response.html'))
+  end
+
+  def test_parse_webdir_single_response
+    response = MitStalker.parse_webdir_response fixture('single_response.html')
     assert_equal 1, response.length, 'Response should have 1 user'
 
     assert_equal 'Costan, Victor Marius', response.first[:name]
     assert_equal 'costan@MIT.EDU', response.first[:email]
+    assert_equal '381 Cardinal Medeiros Ave', response.first[:address]
+    assert_equal 'Electrical Eng & Computer Sci', response.first[:department]
+    assert_equal 'School Of Engineering', response.first[:school]
     assert_equal 'G', response.first[:year]
-    assert_equal 'Sidney-Pacific NW86-948C', response.first[:address]
     assert_equal 'http://www.costan.us', response.first[:url]
-    assert_equal 'V-costan', response.first[:alias]
   end
 
-  def test_parse_mitdir_multiple_responses
-    response = MitStalker.parse_mitdir_response fixture('multi_response.txt')
-    assert_equal 155, response.length, 'Response should have 110 users'
+  def test_parse_webdir_multiple_responses
+    response = MitStalker.parse_webdir_response fixture('multi_response.html')
+    assert_equal 219, response.length, 'Response should have 219 users'
 
     response.each do |user|
       assert_operator(/Li/, :=~, user[:name], "Name doesn't match query")
       assert_operator(/li/i, :=~, user[:alias], "Alias doesn't match query")
+      assert_operator(/^alias=/i, :=~, user[:alias],
+                      "Alias doesn't look right")
     end
   end
 
@@ -70,29 +82,29 @@ class MitStalkerTest < Minitest::Test
     end
   end
 
-  def test_refine_mitdir_response_by_name
-    MitStalker.expects(:finger).with('Y-li16', 'web.mit.edu').
-        returns(fixture('single_response.txt')).once
+  def test_refine_webdir_response_by_name
+    MitStalker.expects(:web_query).with('alias=Y-li8').
+        returns(fixture('single_response.html')).once
 
-    multi_response = MitStalker.parse_mitdir_response(
-        fixture('multi_response.txt'))
-    user = MitStalker.refine_mitdir_response_by_name multi_response,
-                                                     'Yan Ping Li'
+    multi_response = MitStalker.parse_webdir_response(
+        fixture('multi_response.html'))
+    user = MitStalker.refine_webdir_response_by_name multi_response,
+                                                     'Yau Yee Li'
     assert_equal 'costan@MIT.EDU', user[:email], 'Wrong user information'
   end
 
-  def test_refine_mitdir_response_by_email
-    MitStalker.expects(:finger).with('V-costan', 'web.mit.edu').
-               returns(fixture('single_response.txt')).once
-    MitStalker.expects(:finger).with('A-li', 'web.mit.edu').
-               returns(fixture('single_response2.txt')).once
+  def test_refine_webdir_response_by_email
+    MitStalker.expects(:web_query).with('alias=V-costan').
+               returns(fixture('single_response.html')).once
+    MitStalker.expects(:web_query).with('alias=X-zhao1').
+               returns(fixture('single_response2.html')).once
 
     mixed_response =
-        MitStalker.parse_mitdir_response fixture('mixed_response.txt')
-    user = MitStalker.refine_mitdir_response_by_email mixed_response.reverse,
-                                                     'aliceli'
+        MitStalker.parse_webdir_response fixture('mixed_response.html')
+    user = MitStalker.refine_webdir_response_by_email mixed_response,
+                                                      'xamyzhao'
     assert user, 'No user returned'
-    assert_equal 'Li, Alice', user[:name]
+    assert_equal 'Zhao, Xiaoyu', user[:name]
   end
 
   def test_flip_full_name

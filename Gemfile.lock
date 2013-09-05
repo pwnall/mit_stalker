@@ -29,7 +29,7 @@ GEM
     jwt (0.1.8)
       multi_json (>= 1.5)
     metaclass (0.0.1)
-    minitest (5.0.6)
+    minitest (5.0.7)
     mocha (0.14.0)
       metaclass (~> 0.0.1)
     multi_json (1.7.9)
@@ -61,5 +61,6 @@ DEPENDENCIES
   jeweler (>= 1.8.7)
   minitest (>= 4.7.3)
   mocha (>= 0.14.0)
+  nokogiri (>= 1.5.0)
   simplecov
   yard (>= 0.8.7)

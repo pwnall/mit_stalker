@@ -1,5 +1,7 @@
 source :rubygems
 
+gem 'nokogiri', '>= 1.5.0'
+
 group :development do
   gem 'mocha', '>= 0.14.0', :require => false
   gem 'minitest', '>= 4.7.3'
