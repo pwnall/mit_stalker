@@ -71,7 +71,7 @@ class MitStalkerTest < Minitest::Test
   end
 
   def test_refine_mitdir_response_by_name
-    MitStalker.expects(:finger).with('Y-li16', 'web.mit.edu').
+    MitStalker.expects(:finger).with('Y-li16', 'mitdir.mit.edu').
         returns(fixture('single_response.txt')).once
 
     multi_response = MitStalker.parse_mitdir_response(
@@ -82,9 +82,9 @@ class MitStalkerTest < Minitest::Test
   end
 
   def test_refine_mitdir_response_by_email
-    MitStalker.expects(:finger).with('V-costan', 'web.mit.edu').
+    MitStalker.expects(:finger).with('V-costan', 'mitdir.mit.edu').
                returns(fixture('single_response.txt')).once
-    MitStalker.expects(:finger).with('A-li', 'web.mit.edu').
+    MitStalker.expects(:finger).with('A-li', 'mitdir.mit.edu').
                returns(fixture('single_response2.txt')).once
 
     mixed_response =

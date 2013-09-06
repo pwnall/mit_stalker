@@ -91,7 +91,8 @@ module MitStalker
     return users.first if users.length == 1
 
     # Requesting by alias should return a single name.
-    users = parse_mitdir_response finger(user_base_info[:alias], 'web.mit.edu')
+    users = parse_mitdir_response finger(user_base_info[:alias],
+                                         'mitdir.mit.edu')
     users and users.first
   end
 
@@ -104,10 +105,10 @@ module MitStalker
     users.each do |user|
       if user[:email]
         next unless user[:email].split('@').first.downcase == user_name
-        users = parse_mitdir_response finger(user[:alias], 'web.mit.edu')
+        users = parse_mitdir_response finger(user[:alias], 'mitdir.mit.edu')
         return users && users.first
       else
-        users = parse_mitdir_response finger(user[:alias], 'web.mit.edu')
+        users = parse_mitdir_response finger(user[:alias], 'mitdir.mit.edu')
         next unless users
         user = users.first
         if user[:email] and user[:email].split('@').first == user_name
@@ -132,12 +133,12 @@ module MitStalker
     full_name = full_name_from_user_name user_name
 
     if full_name
-      users = parse_mitdir_response finger(full_name, 'web.mit.edu')
+      users = parse_mitdir_response finger(full_name, 'mitdir.mit.edu')
     else
       users = []
     end
     if users.empty?
-      users = parse_mitdir_response finger(user_name, 'web.mit.edu')
+      users = parse_mitdir_response finger(user_name, 'mitdir.mit.edu')
     end
 
     user = refine_mitdir_response_by_name(users, full_name) if full_name
