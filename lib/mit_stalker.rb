@@ -38,7 +38,7 @@ module MitStalker
   # Returns a string containing the full name, or nil if the Athena username is
   # not recognized.
   def self.full_name_from_user_name(user_name)
-    athena_data = finger user_name.downcase, 'linux.mit.edu'
+    athena_data = finger user_name.downcase, 'athena.dialup.mit.edu'
     return nil if athena_data.nil?
     match = /(N|n)ame\: (.*)$/.match athena_data
     match and match[2].strip

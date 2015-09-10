@@ -10,7 +10,7 @@ class MitStalkerTest < Minitest::Test
     assert_equal nil, MitStalker.finger('root', 'nosuchhostname.com'),
                  'Invalid hostname'
 
-    result = MitStalker.finger 'no_such_user', 'linux.mit.edu'
+    result = MitStalker.finger 'no_such_user', 'athena.dialup.mit.edu'
     assert_operator(/no_such_user/, :=~, result,
                     "The finger response looks incorrect")
 
